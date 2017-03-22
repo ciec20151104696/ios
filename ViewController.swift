@@ -17,14 +17,16 @@ class ViewController: UIViewController {
     var choose :Int=0
     var point:Bool = false
     @IBAction func symbol(_ sender: Any) {
+        var temp:Float
+        temp = Float(show.text!)!
+        temp = -temp
+        show.text = ("\(temp)")
     }
     @IBAction func empty(_ sender: Any) {
         frist = 0.0
         second = 0.0
         choose = 0
         show.text = nil
-    }
-    @IBAction func remove(_ sender: Any) {
     }
     @IBAction func add(_ sender: Any) {
         var temp:Double
@@ -203,7 +205,7 @@ class ViewController: UIViewController {
         if show.text==nil{
             show.text = "0."
         }
-        else if !point {
+        else{
             show.text = ( show.text! + ("\(".")"))
         }
     }
